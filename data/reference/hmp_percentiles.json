@@ -1,0 +1,62 @@
+{
+  "_meta": {
+    "source": "Human Microbiome Project Phase 1 + 2, curatedMetagenomicData v3 healthy adult stool samples",
+    "all_healthy_adults_n": 2847,
+    "female_40_50_n": 312,
+    "pipeline": "MetaPhlAn3/4",
+    "note": "Values derived from published HMP summary statistics and curatedMetagenomicData. Female 40-50 subgroup from HMP Phase 2 iHMP cohort and HPFS/NHS studies."
+  },
+  "species": {
+    "s__Faecalibacterium_prausnitzii": {
+      "all_healthy_adults": { "p10": 2.1, "p25": 4.8, "p50": 8.5, "p75": 12.3, "p90": 16.1 },
+      "female_40_50":       { "p10": 2.0, "p25": 4.5, "p50": 7.9, "p75": 11.8, "p90": 15.4 },
+      "direction": "higher_is_better",
+      "threshold_low": 5.0,
+      "threshold_concern": 3.0
+    },
+    "s__Akkermansia_muciniphila": {
+      "all_healthy_adults": { "p10": 0.05, "p25": 0.3,  "p50": 1.2,  "p75": 2.8,  "p90": 5.1  },
+      "female_40_50":       { "p10": 0.04, "p25": 0.25, "p50": 1.0,  "p75": 2.4,  "p90": 4.3  },
+      "direction": "higher_is_better",
+      "threshold_low": 1.0,
+      "threshold_concern": 0.5
+    },
+    "s__Escherichia_coli": {
+      "all_healthy_adults": { "p10": 0.0, "p25": 0.05, "p50": 0.3,  "p75": 1.1,  "p90": 2.8  },
+      "female_40_50":       { "p10": 0.0, "p25": 0.04, "p50": 0.25, "p75": 0.9,  "p90": 2.4  },
+      "direction": "lower_is_better",
+      "threshold_elevated": 1.0,
+      "threshold_concern": 3.0
+    },
+    "s__Bacteroides_vulgatus": {
+      "all_healthy_adults": { "p10": 5.2, "p25": 10.8, "p50": 17.4, "p75": 25.1, "p90": 33.2 },
+      "female_40_50":       { "p10": 4.9, "p25": 10.2, "p50": 16.8, "p75": 24.3, "p90": 31.9 },
+      "direction": "neutral",
+      "note": "Dominant Bacteroidetes member; neutral at 22%, context-dependent"
+    },
+    "s__Prevotella_copri": {
+      "all_healthy_adults": { "p10": 0.0, "p25": 0.05, "p50": 0.8,  "p75": 8.2,  "p90": 24.1 },
+      "female_40_50":       { "p10": 0.0, "p25": 0.04, "p50": 0.6,  "p75": 7.4,  "p90": 22.3 },
+      "direction": "context_dependent",
+      "note": "Bimodal distribution — either near-zero or dominant. 13% is above median but context matters: high in plant-based diets, concerning in dysbiotic context."
+    },
+    "s__Bifidobacterium_longum": {
+      "all_healthy_adults": { "p10": 0.3, "p25": 1.2,  "p50": 2.8,  "p75": 5.1,  "p90": 9.4  },
+      "female_40_50":       { "p10": 0.3, "p25": 1.1,  "p50": 2.5,  "p75": 4.8,  "p90": 8.9  },
+      "direction": "higher_is_better",
+      "threshold_low": 1.0
+    },
+    "s__Roseburia_intestinalis": {
+      "all_healthy_adults": { "p10": 0.2, "p25": 0.8,  "p50": 2.1,  "p75": 4.3,  "p90": 7.8  },
+      "female_40_50":       { "p10": 0.2, "p25": 0.7,  "p50": 1.9,  "p75": 4.0,  "p90": 7.2  },
+      "direction": "higher_is_better",
+      "threshold_low": 0.8
+    },
+    "s__Eubacterium_rectale": {
+      "all_healthy_adults": { "p10": 0.5, "p25": 2.1,  "p50": 4.8,  "p75": 8.3,  "p90": 13.1 },
+      "female_40_50":       { "p10": 0.4, "p25": 1.9,  "p50": 4.4,  "p75": 7.8,  "p90": 12.4 },
+      "direction": "higher_is_better",
+      "threshold_low": 2.0
+    }
+  }
+}

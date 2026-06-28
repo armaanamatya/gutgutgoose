@@ -1,0 +1,49 @@
+{
+  "_meta": {
+    "source": "Arumugam M, et al. (2011). Enterotypes of the human gut microbiome. Nature 473:174-180. DOI: 10.1038/nature09944",
+    "note": "Genus-level relative abundances representing each enterotype centroid. Values are approximate means from the original paper's supplementary data. We compute Euclidean distance in CLR-transformed space to assign samples.",
+    "genera_used": ["Bacteroides", "Prevotella", "Ruminococcus", "Faecalibacterium", "Blautia", "Akkermansia", "Bifidobacterium", "Methanobrevibacter"]
+  },
+  "ET1": {
+    "name": "Bacteroides-dominant",
+    "description": "Common in Western diets. Strong protein and animal fat metabolisers. Typically associated with higher meat consumption.",
+    "centroid": {
+      "Bacteroides":       32.4,
+      "Prevotella":         1.2,
+      "Ruminococcus":       5.8,
+      "Faecalibacterium":   7.1,
+      "Blautia":            4.9,
+      "Akkermansia":        1.4,
+      "Bifidobacterium":    2.2,
+      "Methanobrevibacter": 0.3
+    }
+  },
+  "ET2": {
+    "name": "Prevotella-dominant",
+    "description": "Common in plant-based and agrarian populations. Strong plant carbohydrate fermenters. Associated with high-fibre diets.",
+    "centroid": {
+      "Bacteroides":        4.8,
+      "Prevotella":        28.7,
+      "Ruminococcus":       6.2,
+      "Faecalibacterium":   9.3,
+      "Blautia":            3.4,
+      "Akkermansia":        1.1,
+      "Bifidobacterium":    1.8,
+      "Methanobrevibacter": 1.9
+    }
+  },
+  "ET3": {
+    "name": "Ruminococcus-dominant",
+    "description": "Mixed profile with elevated Ruminococcus and Methanobrevibacter. Often seen in older adults and populations with high diversity. Associated with mucin degradation capability.",
+    "centroid": {
+      "Bacteroides":        9.6,
+      "Prevotella":         2.1,
+      "Ruminococcus":      18.4,
+      "Faecalibacterium":   8.9,
+      "Blautia":            5.7,
+      "Akkermansia":        2.8,
+      "Bifidobacterium":    3.1,
+      "Methanobrevibacter": 4.6
+    }
+  }
+}

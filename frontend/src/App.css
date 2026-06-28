@@ -1,0 +1,253 @@
+/* ─── Reset & base ──────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: #f8fafc;
+  color: #1e293b;
+  line-height: 1.6;
+}
+
+/* ─── Header ─────────────────────────────────────────────────────────── */
+.app-header {
+  background: #0f172a;
+  padding: 18px 24px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.header-inner { max-width: 960px; margin: 0 auto; display: flex; align-items: center; gap: 16px; }
+.logo { font-size: 1.2rem; font-weight: 700; color: #f1f5f9; }
+.header-tagline { font-size: 0.85rem; color: #94a3b8; }
+
+/* ─── Landing ─────────────────────────────────────────────────────────── */
+.landing { display: flex; justify-content: center; padding: 80px 24px; }
+.landing-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 48px 40px;
+  max-width: 520px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  text-align: center;
+}
+.landing-card h1 { font-size: 2rem; margin-bottom: 16px; }
+.landing-sub { color: #475569; margin-bottom: 32px; }
+
+/* ─── Buttons ─────────────────────────────────────────────────────────── */
+.btn-primary {
+  background: #0ea5e9;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn-primary:hover { background: #0284c7; }
+.btn-secondary {
+  background: #f1f5f9;
+  color: #0f172a;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* ─── Loading / Error ────────────────────────────────────────────────── */
+.loading-state, .error-state {
+  display: flex; flex-direction: column; align-items: center;
+  gap: 16px; padding: 80px 24px; text-align: center; color: #64748b;
+}
+.spinner {
+  width: 40px; height: 40px;
+  border: 4px solid #e2e8f0;
+  border-top-color: #0ea5e9;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ─── Report layout ─────────────────────────────────────────────────── */
+.report { max-width: 960px; margin: 0 auto; padding: 32px 24px 64px; }
+.report-section { margin-bottom: 48px; }
+.section-title { font-size: 1.4rem; font-weight: 700; margin-bottom: 8px; }
+.section-subtitle { color: #64748b; margin-bottom: 20px; }
+
+/* ─── Score section ─────────────────────────────────────────────────── */
+.score-section {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 32px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  align-items: start;
+}
+.score-left { display: flex; flex-direction: column; align-items: center; gap: 20px; }
+.gut-score-gauge { display: flex; flex-direction: column; align-items: center; }
+.gauge-label { font-size: 0.85rem; color: #64748b; margin-top: 4px; text-align: center; }
+
+.score-breakdown { width: 100%; display: flex; flex-direction: column; gap: 8px; }
+.score-component { display: grid; grid-template-columns: 1fr 80px 28px; gap: 8px; align-items: center; }
+.comp-label { font-size: 0.75rem; color: #64748b; text-transform: capitalize; }
+.comp-bar { background: #f1f5f9; border-radius: 4px; height: 8px; overflow: hidden; }
+.comp-fill { background: #0ea5e9; height: 100%; border-radius: 4px; transition: width 0.6s ease; }
+.comp-val { font-size: 0.8rem; font-weight: 600; text-align: right; }
+
+.score-right { display: flex; flex-direction: column; gap: 16px; }
+.score-right h2 { font-size: 1.5rem; }
+.score-narrative { color: #334155; line-height: 1.7; }
+.diversity-badge, .enterotype-badge {
+  background: #f0f9ff;
+  border: 1px solid #bae6fd;
+  border-radius: 10px;
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.pct-badge {
+  display: inline-block;
+  background: #0ea5e9;
+  color: #fff;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  width: fit-content;
+}
+.div-label { font-size: 0.85rem; font-weight: 600; color: #0369a1; }
+.enterotype-sub { font-size: 0.85rem; color: #475569; }
+
+/* ─── Chart section ─────────────────────────────────────────────────── */
+.chart-section {
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+.abundance-chart { max-width: 100%; }
+.chart-legend {
+  display: flex; flex-wrap: wrap; gap: 12px;
+  margin-top: 16px; font-size: 0.78rem; color: #475569;
+}
+.legend-item { display: flex; align-items: center; gap: 5px; }
+.legend-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+
+/* ─── Finding cards ─────────────────────────────────────────────────── */
+.finding-card {
+  border: 1px solid;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+.finding-header {
+  width: 100%; background: none; border: none; cursor: pointer;
+  padding: 16px 20px; display: flex; justify-content: space-between;
+  align-items: center; text-align: left;
+}
+.finding-title-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.finding-name { font-weight: 700; font-style: italic; }
+.finding-badge {
+  color: #fff; border-radius: 12px; font-size: 0.72rem;
+  padding: 3px 10px; font-weight: 600; white-space: nowrap;
+}
+.finding-value { color: #64748b; font-size: 0.9rem; }
+.finding-chevron { color: #94a3b8; font-size: 0.8rem; }
+
+.finding-body { padding: 0 20px 20px; display: flex; flex-direction: column; gap: 16px; }
+.finding-narrative { color: #334155; line-height: 1.7; }
+
+/* Percentile bar */
+.percentile-bar-wrap { display: flex; flex-direction: column; gap: 4px; }
+.percentile-track {
+  position: relative; height: 8px;
+  background: linear-gradient(to right, #fef2f2, #fef9c3, #f0fdf4);
+  border-radius: 4px;
+}
+.percentile-marker {
+  position: absolute; top: -3px;
+  width: 2px; height: 14px; background: rgba(0,0,0,0.2);
+  transform: translateX(-50%);
+}
+.percentile-value-pin {
+  position: absolute; top: -5px;
+  width: 18px; height: 18px;
+  background: #0f172a; border-radius: 50%;
+  transform: translateX(-50%);
+  border: 2px solid #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+.percentile-labels {
+  display: flex; justify-content: space-between;
+  font-size: 0.72rem; color: #94a3b8;
+}
+
+.sex-note {
+  background: #fdf4ff; border: 1px solid #e9d5ff;
+  border-radius: 8px; padding: 12px 14px;
+  display: flex; gap: 10px; align-items: flex-start;
+}
+.sex-note-icon { font-size: 1.1rem; flex-shrink: 0; }
+.sex-note p { font-size: 0.88rem; color: #6b21a8; line-height: 1.6; }
+
+.finding-papers { border-top: 1px solid #e2e8f0; padding-top: 12px; }
+.papers-label { font-size: 0.78rem; font-weight: 600; color: #94a3b8; margin-bottom: 6px; }
+.paper-ref { font-size: 0.8rem; color: #64748b; margin-bottom: 4px; }
+
+/* ─── Estrobolome section ───────────────────────────────────────────── */
+.estrobolome-card {
+  background: linear-gradient(135deg, #fdf4ff, #ede9fe);
+  border: 1px solid #d8b4fe;
+  border-radius: 12px;
+  padding: 24px;
+  line-height: 1.75;
+  color: #3b0764;
+}
+
+/* ─── Recommendations ───────────────────────────────────────────────── */
+.recommendation-list { display: flex; flex-direction: column; gap: 24px; }
+.recommendations-intro {
+  background: #f0f9ff; border-left: 4px solid #0ea5e9;
+  padding: 16px 20px; border-radius: 0 8px 8px 0;
+  color: #0c4a6e; line-height: 1.7; margin-bottom: 8px;
+}
+.rec-group {
+  background: #fff; border-radius: 12px; padding: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.rec-group-title { font-size: 1.05rem; margin-bottom: 16px; color: #1e293b; }
+.rec-items { display: flex; flex-direction: column; gap: 12px; }
+.rec-item {
+  background: #f8fafc; border-radius: 8px; padding: 14px;
+  border-left: 3px solid #0ea5e9;
+}
+.rec-item-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+.rec-item-name { font-weight: 600; }
+.rec-timeline {
+  font-size: 0.75rem; color: #0369a1;
+  background: #e0f2fe; border-radius: 10px; padding: 2px 8px;
+}
+.rec-dose { font-size: 0.88rem; color: #334155; margin-bottom: 4px; }
+.rec-mechanism { font-size: 0.83rem; color: #64748b; margin-bottom: 4px; }
+.rec-evidence { font-size: 0.78rem; color: #94a3b8; }
+.rec-avoid { margin-top: 12px; }
+.avoid-label { font-size: 0.85rem; font-weight: 600; color: #b45309; margin-bottom: 6px; }
+.rec-avoid ul { padding-left: 20px; }
+.rec-avoid li { font-size: 0.85rem; color: #78350f; margin-bottom: 4px; }
+
+/* ─── Footer ─────────────────────────────────────────────────────────── */
+.report-footer {
+  text-align: center; padding-top: 24px;
+  border-top: 1px solid #e2e8f0;
+  color: #94a3b8; font-size: 0.8rem; line-height: 2;
+}
+.footer-brand { color: #64748b; }
+
+/* ─── Responsive ─────────────────────────────────────────────────────── */
+@media (max-width: 700px) {
+  .score-section { grid-template-columns: 1fr; }
+  .score-left { border-bottom: 1px solid #f1f5f9; padding-bottom: 20px; }
+}

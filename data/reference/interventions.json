@@ -1,0 +1,144 @@
+{
+  "_meta": {
+    "note": "Evidence-backed food and lifestyle interventions per species deficit. Each intervention is grounded in at least one peer-reviewed study. Avoid making drug-level efficacy claims."
+  },
+  "s__Akkermansia_muciniphila": {
+    "deficit_threshold_pct": 1.0,
+    "priority_weight": 3,
+    "increase_with": [
+      {
+        "name": "Pomegranate extract or juice",
+        "dose": "240mL juice or 400mg standardised extract daily",
+        "mechanism": "Pomegranate polyphenols (ellagitannins) are converted by gut bacteria to urolithins, which selectively promote Akkermansia growth and strengthen the mucus layer",
+        "timeline": "4–8 weeks",
+        "evidence": "Multiple RCTs and observational studies; Anhê FF et al. (2015) Gut; Henning SM et al. (2019) Eur J Nutr",
+        "paper_id": "henning_2019_eur_jnutr"
+      },
+      {
+        "name": "Green tea (EGCG)",
+        "dose": "2–3 cups daily, or 400mg EGCG supplement",
+        "mechanism": "Epigallocatechin gallate (EGCG) promotes Akkermansia growth directly and protects mucus layer integrity",
+        "timeline": "6–10 weeks",
+        "evidence": "Henning SM et al. (2019); multiple animal studies showing consistent Akkermansia enrichment",
+        "paper_id": "henning_2019_eur_jnutr"
+      },
+      {
+        "name": "Cranberry polyphenols",
+        "dose": "240mL unsweetened cranberry juice or 500mg cranberry extract daily",
+        "mechanism": "A-type proanthocyanidins from cranberry specifically promote Akkermansia proliferation in the mucus layer",
+        "timeline": "4–6 weeks",
+        "evidence": "Anhê FF et al. (2015) Gut — cranberry polyphenols reversed high-fat diet-induced Akkermansia decline",
+        "paper_id": "dao_2016_gut"
+      },
+      {
+        "name": "Reduce ultra-processed foods",
+        "dose": "Replace packaged snacks with whole-food alternatives",
+        "mechanism": "Emulsifiers (carboxymethylcellulose, polysorbate-80) in ultra-processed foods degrade the mucus layer that Akkermansia colonises",
+        "timeline": "Ongoing",
+        "evidence": "Chassaing B et al. (2015) Nature — dietary emulsifiers erode mucus layer and deplete Akkermansia",
+        "paper_id": null
+      }
+    ],
+    "avoid": [
+      "Ultra-processed foods with emulsifiers (CMC, polysorbate-80)",
+      "High-fat, low-fibre diet patterns — consistently deplete Akkermansia",
+      "Some artificial sweeteners (saccharin, sucralose) — shown to reduce Akkermansia in mouse models"
+    ]
+  },
+  "s__Faecalibacterium_prausnitzii": {
+    "deficit_threshold_pct": 5.0,
+    "priority_weight": 3,
+    "increase_with": [
+      {
+        "name": "Jerusalem artichoke (sunchoke)",
+        "dose": "100–150g fresh, 2–3 times per week",
+        "mechanism": "Highest natural source of inulin-type fructans (FOS). F. prausnitzii preferentially ferments FOS, producing butyrate. Start small — rapid FOS increase causes gas initially.",
+        "timeline": "4–8 weeks",
+        "evidence": "Multiple prebiotic trials show FOS selectively increases Lachnospiraceae and Ruminococcaceae including F. prausnitzii",
+        "paper_id": "sonnenburg_2016_nature"
+      },
+      {
+        "name": "Chicory root / inulin supplement",
+        "dose": "5g/day starting dose, increase to 10g over 2 weeks",
+        "mechanism": "Inulin is the direct prebiotic substrate for F. prausnitzii fermentation. Go slow — bloating is common in week 1 as your gut adapts.",
+        "timeline": "3–6 weeks",
+        "evidence": "Holscher HD et al. (2015) Journal of Nutrition — inulin increased Faecalibacterium abundance in healthy adults",
+        "paper_id": "sonnenburg_2016_nature"
+      },
+      {
+        "name": "Oats (beta-glucan)",
+        "dose": "1 cup cooked oats daily (provides ~4g beta-glucan)",
+        "mechanism": "Beta-glucan from oats is fermented by Lachnospiraceae and Ruminococcaceae, producing butyrate and supporting F. prausnitzii indirectly",
+        "timeline": "6–12 weeks",
+        "evidence": "Demonstrated in multiple fibre intervention RCTs",
+        "paper_id": "sonnenburg_2016_nature"
+      },
+      {
+        "name": "Leeks, onions, garlic (cooked)",
+        "dose": "1 serving daily",
+        "mechanism": "Natural FOS and fructooligosaccharide sources. Cooking reduces the gas-producing effect while preserving prebiotic activity.",
+        "timeline": "4–8 weeks",
+        "evidence": "Dietary patterns high in allium vegetables consistently associate with higher butyrate-producing bacteria",
+        "paper_id": null
+      },
+      {
+        "name": "Cooled cooked potato / rice (resistant starch)",
+        "dose": "1 serving cooled, then reheated or eaten cold (potato salad, cold rice)",
+        "mechanism": "Cooling converts digestible starch to resistant starch type 3 (RS3). RS3 is fermented by Lachnospiraceae, increasing butyrate production and supporting F. prausnitzii.",
+        "timeline": "4–6 weeks",
+        "evidence": "Baxter NT et al. (2019) Cell Host Microbe — RS3 intervention increased Lachnospiraceae and butyrate production",
+        "paper_id": null
+      }
+    ],
+    "avoid": [
+      "Low-fibre, high-animal-protein diets — starve F. prausnitzii",
+      "Antibiotics — dramatically reduce F. prausnitzii; recovery can take months",
+      "High sugar intake — feeds E. coli and Proteobacteria preferentially"
+    ]
+  },
+  "s__Escherichia_coli": {
+    "deficit_threshold_pct": null,
+    "elevated_threshold_pct": 1.0,
+    "priority_weight": 2,
+    "reduce_with": [
+      {
+        "name": "Fermented foods (kimchi, kefir, live-culture yoghurt)",
+        "dose": "1–2 servings daily",
+        "mechanism": "Lactobacillus and Bifidobacterium from fermented foods compete with E. coli for gut niche, reducing bloom. Also lower gut pH, which E. coli dislikes.",
+        "timeline": "4–8 weeks",
+        "evidence": "Wastyk HC et al. (2021) Cell — high-fermented-food diet increased microbiome diversity and reduced inflammatory markers",
+        "paper_id": null
+      },
+      {
+        "name": "Reduce refined sugar and white flour",
+        "dose": "Aim for <25g added sugar daily",
+        "mechanism": "Simple sugars are preferentially fermented by Proteobacteria including E. coli. Removing this substrate reduces competitive advantage.",
+        "timeline": "2–4 weeks",
+        "evidence": "Dietary patterns high in refined carbohydrates consistently associate with Proteobacteria expansion",
+        "paper_id": null
+      }
+    ]
+  },
+  "s__Bifidobacterium_longum": {
+    "deficit_threshold_pct": 1.0,
+    "priority_weight": 1,
+    "increase_with": [
+      {
+        "name": "Fermented dairy (yoghurt with live cultures, kefir)",
+        "dose": "150–200g daily",
+        "mechanism": "Dairy Bifidobacterium strains transiently colonise the gut and create conditions (lower pH, acetate production) that support resident Bifidobacterium longum",
+        "timeline": "2–4 weeks",
+        "evidence": "Standard dietary guideline; multiple RCTs confirm transient Bifidobacterium enrichment",
+        "paper_id": null
+      },
+      {
+        "name": "Galacto-oligosaccharides (GOS) — from legumes",
+        "dose": "Lentils, chickpeas, black beans 3–4 times per week",
+        "mechanism": "GOS is the primary prebiotic substrate for Bifidobacterium. Legumes are the best natural source.",
+        "timeline": "4–6 weeks",
+        "evidence": "Vulevic J et al. (2015) Gut — GOS significantly increased Bifidobacterium in a double-blind RCT",
+        "paper_id": null
+      }
+    ]
+  }
+}
