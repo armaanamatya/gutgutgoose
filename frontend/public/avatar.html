@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body, html { width: 100%; height: 100%; overflow: hidden; background: #0f172a; }
+    #avatar { width: 100%; height: 100%; }
+    #loading {
+      position: absolute; inset: 0;
+      display: flex; align-items: center; justify-content: center;
+      color: #94a3b8; font-family: sans-serif; font-size: 0.85rem;
+      pointer-events: none;
+    }
+  </style>
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js/+esm",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/",
+      "talkinghead": "https://cdn.jsdelivr.net/gh/met4citizen/TalkingHead@1.7/modules/talkinghead.mjs"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div id="loading">Loading avatar…</div>
+  <div id="avatar"></div>
+
+  <script type="module">
+    import { TalkingHead } from "talkinghead";
+
+    let head = null;
+
+    async function init() {
+      const nodeAvatar = document.getElementById("avatar");
+      head = new TalkingHead(nodeAvatar, {
+        cameraView: "upper",
+      });
+
+      try {
+        await head.showAvatar({
+          url: "https://cdn.jsdelivr.net/gh/met4citizen/TalkingHead@1.7/avatars/mpfb.glb",
+          body: "F",
+          avatarMood: "neutral",
+        });
+        document.getElementById("loading").style.display = "none";
+        window.parent.postMessage({ type: "avatar_loaded" }, "*");
+      } catch (e) {
+        document.getElementById("loading").textContent = "Avatar unavailable";
+        window.parent.postMessage({ type: "avatar_error", message: String(e) }, "*");
+      }
+    }
+
+    window.addEventListener("message", (e) => {
+      if (!head) return;
+      try {
+        if (e.data?.type === "talking") head.setMood?.("happy");
+        else if (e.data?.type === "idle") head.setMood?.("neutral");
+      } catch (_) {}
+    });
+
+    init();
+  </script>
+</body>
+</html>
