@@ -1,11 +1,12 @@
-import { useState } from "react";
+import { useState, lazy, Suspense } from "react";
 import GutScoreGauge from "./components/GutScoreGauge";
 import AbundanceChart from "./components/AbundanceChart";
 import MicrobiomeRadar from "./components/MicrobiomeRadar";
 import FindingCard from "./components/FindingCard";
 import RecommendationList from "./components/RecommendationList";
-import AvatarChat from "./components/AvatarChat";
 import "./App.css";
+
+const AvatarChat = lazy(() => import("./components/AvatarChat"));
 
 const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8000";
 
@@ -187,7 +188,11 @@ export default function App() {
           </footer>
         </main>
       )}
-      {showAvatar && <AvatarChat onClose={() => setShowAvatar(false)} />}
+      {showAvatar && (
+        <Suspense fallback={<div className="avatar-overlay"><div style={{color:"#fff",margin:"auto"}}>Loading…</div></div>}>
+          <AvatarChat onClose={() => setShowAvatar(false)} />
+        </Suspense>
+      )}
     </div>
   );
 }
