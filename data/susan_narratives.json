@@ -1,0 +1,38 @@
+{
+  "_meta": {
+    "generated_by": "Claude Sonnet 4.6 via Claude Code session",
+    "based_on": "susan_profile.json analytics — gut score 51.7/100, Shannon H 2.62, Enterotype ET2",
+    "note": "Pre-computed narratives for demo stability. Backend falls back to live API if this file is absent."
+  },
+  "score_narrative": "Susan, your gut health score of 52 out of 100 tells a clear story: your microbiome has real strengths — a healthy level of diversity and a strong community of plant-fermenting bacteria — but it's being held back by two key imbalances that are very likely driving your bloating, energy dips, and digestive discomfort. The biggest single opportunity is rebuilding your Akkermansia muciniphila, one species whose decline creates a cascading effect on your gut barrier, energy regulation, and hormonal balance.",
+
+  "enterotype_narrative": "Your gut belongs to Enterotype 2, the Prevotella-dominant type — most commonly found in people with a meaningful plant and grain component in their diet. This is actually a positive signal: it means your gut already has the fermentation machinery to thrive on fibre-rich foods, which are the primary lever for everything we're recommending.",
+
+  "findings": [
+    {
+      "species_key": "s__Akkermansia_muciniphila",
+      "display_name": "Akkermansia muciniphila",
+      "flag": "critically_low",
+      "value_pct": 0.48,
+      "narrative": "Akkermansia muciniphila is the bacteria that maintains the thick mucus layer lining your gut wall — think of it as the maintenance crew keeping your gut's protective barrier intact. At 0.48%, your level is critically low: you're in the bottom 25% of women your age, against a healthy median of 1.2%. Here's what makes this particularly relevant for you: estrogen is one of the key signals that keeps the gut's mucus layer thick and hospitable for Akkermansia to live in. As estrogen naturally fluctuates through your early 40s, Akkermansia can decline — which then further thins the mucus, creating a self-reinforcing cycle. Low Akkermansia is directly linked to post-meal energy crashes and a weakened gut barrier, which amplifies the fatigue and bloating you're experiencing."
+    },
+    {
+      "species_key": "s__Escherichia_coli",
+      "display_name": "Escherichia coli",
+      "flag": "critically_elevated",
+      "value_pct": 7.9,
+      "narrative": "Most E. coli strains are completely harmless — they've been part of human gut ecosystems for millions of years. But at 7.9%, yours is running roughly 26 times above the healthy median of 0.3%, which is a clear signal that your gut ecosystem has lost some of its competitive balance. When bacteria like E. coli expand this much, it usually means the ecological checks — the Akkermansia mucus barrier, the butyrate-producing bacteria, the acidic pH they create — have weakened, giving E. coli room to bloom. There's also a direct hormonal dimension: E. coli is one of the main producers of an enzyme that reactivates oestrogens your liver has already packaged for excretion, meaning more oestrogen is being recycled back into your bloodstream rather than cleared — relevant to the irregular energy you've been experiencing."
+    },
+    {
+      "species_key": "s__Faecalibacterium_prausnitzii",
+      "display_name": "Faecalibacterium prausnitzii",
+      "flag": "low",
+      "value_pct": 4.1,
+      "narrative": "Faecalibacterium prausnitzii is arguably the most important anti-inflammatory bacterium in the human gut. It produces butyrate — the primary fuel for the cells lining your colon — as well as an anti-inflammatory compound that directly damps down gut inflammation. At 4.1%, your level is below the healthy median of 8.5% for women your age. This deficit, combined with similarly reduced levels in your other butyrate producers, explains a lot of the bloating pattern you're describing: without adequate butyrate, your colon lining becomes less efficient at managing fermentation gases and fluid balance, and gut transit can slow noticeably after meals."
+    }
+  ],
+
+  "recommendations_narrative": "Susan, your gut is telling a coherent story: it needs more fibre to feed your beneficial bacteria, less refined sugar that's fuelling the E. coli bloom, and some specific plant compounds that research shows directly rebuild Akkermansia. The single most impactful change you can make is adding pomegranate juice or extract and green tea daily — these contain compounds that specifically promote Akkermansia growth, with effects measurable within 4–8 weeks. For Faecalibacterium, adding inulin-rich foods like leeks, onions, garlic, and Jerusalem artichoke creates the direct fermentation substrate these bacteria thrive on. Start with small amounts of new fibres — your gut will need a few weeks to adapt, and you may notice more gas initially, which is a sign the right bacteria are waking up. Most people see meaningful improvement in bloating and post-meal energy within 6–8 weeks of consistent changes.",
+
+  "estrobolome_narrative": "There's a direct feedback loop between your gut bacteria and your hormone levels that's particularly relevant as women move through their 40s. Your gut contains what researchers call the estrobolome — a community of bacteria that produce an enzyme called beta-glucuronidase, which reactivates oestrogens your liver has already packaged for excretion. With E. coli at 7.9%, significantly more oestrogen is being recycled back into your circulation rather than cleared. At the same time, Akkermansia — whose levels are partly maintained by oestrogen — has fallen critically low. This creates a compounding loop: hormonal fluctuation affects Akkermansia, which thins the gut wall, which allows opportunistic bacteria to expand, which further alters hormone recycling. Addressing the gut imbalances in this report is not just about digestion — it's directly connected to the irregular energy and hormonal stability you're working on."
+}
