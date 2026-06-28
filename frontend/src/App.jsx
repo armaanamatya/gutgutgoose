@@ -1,6 +1,7 @@
 import { useState } from "react";
 import GutScoreGauge from "./components/GutScoreGauge";
 import AbundanceChart from "./components/AbundanceChart";
+import MicrobiomeRadar from "./components/MicrobiomeRadar";
 import FindingCard from "./components/FindingCard";
 import RecommendationList from "./components/RecommendationList";
 import "./App.css";
@@ -114,9 +115,19 @@ export default function App() {
             </div>
           </section>
 
-          {/* Section 2: Abundance chart */}
+          {/* Section 2: Radar — you vs healthy reference */}
           <section className="report-section chart-section">
-            <h2 className="section-title">Your top 10 species by abundance</h2>
+            <h2 className="section-title">Your microbiome vs healthy reference</h2>
+            <p className="section-subtitle">
+              Each axis shows how your levels compare to the healthy median for women aged 40–50.
+              The gap between the two polygons is your opportunity.
+            </p>
+            <MicrobiomeRadar report={report} />
+          </section>
+
+          {/* Section 2b: Species abundance detail */}
+          <section className="report-section chart-section">
+            <h2 className="section-title">Species abundance breakdown</h2>
             <AbundanceChart
               topAbundances={report.top_abundances}
               deficits={report.top_deficits}

@@ -238,6 +238,21 @@ body {
 .rec-avoid ul { padding-left: 20px; }
 .rec-avoid li { font-size: 0.85rem; color: #78350f; margin-bottom: 4px; }
 
+/* ─── Radar chart ───────────────────────────────────────────────────── */
+.radar-wrap {
+  max-width: 560px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.radar-note {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  text-align: center;
+}
+
 /* ─── Footer ─────────────────────────────────────────────────────────── */
 .report-footer {
   text-align: center; padding-top: 24px;
