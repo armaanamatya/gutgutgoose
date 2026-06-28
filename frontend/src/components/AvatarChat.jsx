@@ -122,7 +122,6 @@ export default function AvatarChat({ onClose }) {
             src="/avatar.html"
             title="Gut Guide Avatar"
             style={{ width: "100%", height: "100%", border: "none", display: "block" }}
-            sandbox="allow-scripts allow-same-origin"
           />
           {!avatarReady && (
             <div className="avatar-iframe-loading">Loading avatar…</div>
