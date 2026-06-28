@@ -1,0 +1,74 @@
+[
+  {
+    "id": "akkermansia_low",
+    "keywords": ["akkermansia", "low", "why", "missing", "barrier", "mucus"],
+    "question": "Why is my Akkermansia so low?",
+    "answer": "Your Akkermansia is at 0.48% — in the bottom quarter of women your age, against a healthy median of 1.2%. Two things are likely happening. Akkermansia lives specifically in the mucus layer of your gut wall, and estrogen is one of the signals that keeps that mucus thick. As estrogen fluctuates in your 40s, the mucus layer thins, which leaves less habitat for Akkermansia to colonise. On top of that, emulsifiers in ultra-processed foods — the ones with names like polysorbate-80 on the label — directly erode that mucus layer. Pomegranate juice and green tea are the most evidence-backed ways to rebuild it."
+  },
+  {
+    "id": "what_to_eat",
+    "keywords": ["eat", "food", "diet", "nutrition", "meal", "what should", "recommend"],
+    "question": "What should I eat to improve my gut?",
+    "answer": "Your profile tells me you need three things: inulin-type fibres to feed your Faecalibacterium, polyphenol-rich foods to rebuild Akkermansia, and fermented foods to crowd out the excess E. coli. Practically: start your mornings with oats. Add leeks, garlic, or onions to dinner several times a week — cooked is fine. Drink one or two cups of green tea daily. A small glass of pomegranate juice in the morning is one of the most direct interventions for your Akkermansia specifically. And live-culture yoghurt or kefir once a day. Start new fibres slowly — your gut will need two to three weeks to adapt."
+  },
+  {
+    "id": "bloating",
+    "keywords": ["bloat", "bloating", "gas", "uncomfortable", "stomach", "distended", "full"],
+    "question": "Why am I so bloated after meals?",
+    "answer": "Your bloating most likely comes from two things we found in your sample. Your Faecalibacterium prausnitzii is at 4.1%, well below the healthy median of 8.5%. This bacteria makes butyrate — the fuel for your colon lining. Without enough butyrate, your colon handles fermentation gases less efficiently and gut transit slows. On top of that, your E. coli is running at nearly 8%, and E. coli fermentation produces more gas than the beneficial bacteria it's displacing. Both of these respond to dietary changes within four to six weeks."
+  },
+  {
+    "id": "estrobolome",
+    "keywords": ["estrobolome", "oestrogen", "estrogen", "hormone", "hormones", "perimenopause", "menopause", "period", "cycle"],
+    "question": "What is the estrobolome and how does it affect me?",
+    "answer": "The estrobolome is the collection of gut bacteria that produce an enzyme called beta-glucuronidase. This enzyme reactivates oestrogens your liver has already processed for excretion — so instead of being cleared from your body, they get recycled back into your bloodstream. Your E. coli at nearly 8% is one of the main producers of this enzyme. This means significantly more oestrogen is being recycled than a balanced gut would allow. As oestrogen naturally fluctuates through your 40s, this recycling loop can amplify hormonal variability — contributing to the irregular energy you've been experiencing. Bringing E. coli back into range through fermented foods is directly relevant to your hormonal balance."
+  },
+  {
+    "id": "timeline",
+    "keywords": ["long", "when", "timeline", "weeks", "months", "how soon", "improve", "change", "see results"],
+    "question": "How long will it take to see improvement?",
+    "answer": "Based on the research, here's a realistic timeline. Within one to two weeks, the E. coli bloom should start to reduce as fermented foods lower your gut pH — E. coli doesn't love an acidic environment. Within three to four weeks, bloating typically improves as butyrate producers start recovering. Within six to eight weeks, Akkermansia levels can measurably increase with consistent pomegranate and green tea. The gut microbiome is more responsive to diet than most people expect — it's not like changing muscle mass, it changes much faster. But consistency is key. Sporadic changes produce sporadic results."
+  },
+  {
+    "id": "most_urgent",
+    "keywords": ["urgent", "priority", "first", "important", "worst", "biggest", "start", "focus"],
+    "question": "Which finding is most important to address first?",
+    "answer": "Akkermansia, without question. The reason is the cascade effect. When Akkermansia is low, the gut wall becomes more permeable — what's often called a leaky gut — which amplifies the impact of your elevated E. coli, because more of its inflammatory byproducts can cross into circulation. And a more permeable gut makes it harder for butyrate producers like Faecalibacterium to do their job. It's a self-reinforcing spiral downward. The good news is that rebuilding Akkermansia is achievable with pomegranate and green tea — both easy to add immediately, with no side effects. I'd start there today."
+  },
+  {
+    "id": "avoid",
+    "keywords": ["avoid", "stop", "don't", "bad", "worst", "limit", "cut", "reduce", "shouldn't"],
+    "question": "What foods or habits should I avoid?",
+    "answer": "Three main things. Ultra-processed foods: the emulsifiers in packaged snacks — carboxymethylcellulose and polysorbate-80 specifically — directly erode the mucus layer where your Akkermansia lives. Check ingredient labels. Refined sugar and white flour: these preferentially feed your E. coli, which is already too high. Aiming for under 25 grams of added sugar per day would make a real difference within weeks. And go slowly with large sudden increases in raw fibre — introducing too much inulin or resistant starch at once causes the gas and bloating you're already dealing with. Cook your garlic and leeks rather than eating them raw to start."
+  },
+  {
+    "id": "enterotype",
+    "keywords": ["enterotype", "gut type", "prevotella", "type 2", "ET2", "what type", "category"],
+    "question": "What does my gut type mean?",
+    "answer": "You're Enterotype 2 — the Prevotella-dominant type. Your Prevotella copri is at 13% of your microbiome, making it one of your most abundant species. This enterotype is most common in people with a strong plant and grain component to their diet. It's actually a good foundation — your gut already has the fermentation machinery to thrive on the fibre-rich foods we're recommending. The complication is that with an otherwise imbalanced ecosystem, elevated Prevotella can amplify inflammation. Rebuilding your Akkermansia and Faecalibacterium will help put Prevotella back into a healthier community context."
+  },
+  {
+    "id": "butyrate",
+    "keywords": ["butyrate", "faecalibacterium", "short chain", "fatty acid", "colon", "inflammation"],
+    "question": "What is butyrate and why does it matter?",
+    "answer": "Butyrate is a short-chain fatty acid produced when your gut bacteria ferment dietary fibre. It's the primary energy source for colonocytes — the cells lining your large intestine. Think of it as the power supply for your gut wall. Without adequate butyrate, the colon lining weakens, gut permeability increases, and inflammation rises. Your combined butyrate-producing bacteria — Faecalibacterium at 4.1%, Roseburia at 1.8%, and Eubacterium rectale at 2.9% — are all below their healthy medians. Your gut is running on a reduced fuel supply. Jerusalem artichoke, chicory, oats, and cooled resistant starches are the most direct dietary sources of the fibres these bacteria ferment."
+  },
+  {
+    "id": "energy",
+    "keywords": ["energy", "tired", "fatigue", "exhausted", "sluggish", "crash", "afternoon", "sleep", "motivation"],
+    "question": "How does my gut affect my energy levels?",
+    "answer": "Your gut is affecting your energy through three mechanisms we can see in your data. First, low Akkermansia means reduced GLP-1 stimulation — GLP-1 is a hormone that stabilises blood sugar, and low levels lead directly to post-meal energy crashes. Second, your low Faecalibacterium means reduced butyrate production, which matters because butyrate crosses the blood-brain barrier and influences serotonin production — about 90% of serotonin is made in the gut. Third, your E. coli at 7.9% produces a molecule called lipopolysaccharide that drives systemic low-grade inflammation — and inflammation is one of the most reliable causes of chronic fatigue."
+  },
+  {
+    "id": "ecoli",
+    "keywords": ["e coli", "ecoli", "escherichia", "bacteria", "elevated", "high", "dangerous", "infection"],
+    "question": "Is my E. coli dangerous?",
+    "answer": "Not dangerous — reassuring is the right word here. Most E. coli strains are completely harmless and have been part of human gut ecosystems for millions of years. But at 7.9%, yours is running about 26 times above the healthy median of 0.3%. That's not a food safety issue — it's an ecological imbalance. When E. coli expands this much, it usually means the ecological checks have weakened: the Akkermansia mucus barrier, the acidic pH from butyrate producers, the competition from diverse species. Reduce the refined sugar that feeds it and add fermented foods to increase competition, and this number comes down."
+  },
+  {
+    "id": "score",
+    "keywords": ["score", "52", "51", "grade", "overall", "how am i", "how bad", "how good", "out of 100"],
+    "question": "What does my gut score of 52 mean?",
+    "answer": "Your score of 52 out of 100 puts you in Grade C — needs attention — and it reflects a gut that has real strengths but is being held back by two significant imbalances. Your diversity score is actually decent at 23 out of 30 — you have a reasonably varied community. The biggest gaps are in your butyrate producers, which scored 23 out of 35, and your Akkermansia, which scored only 5 out of 20. The E. coli elevation costs you almost all of the proteobacteria points. The encouraging thing about a score in this range is that the causes are well-understood and the interventions are dietary — nothing complicated. Eight weeks of consistent changes could realistically move you into the 65-70 range."
+  }
+]

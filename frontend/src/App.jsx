@@ -4,6 +4,7 @@ import AbundanceChart from "./components/AbundanceChart";
 import MicrobiomeRadar from "./components/MicrobiomeRadar";
 import FindingCard from "./components/FindingCard";
 import RecommendationList from "./components/RecommendationList";
+import AvatarChat from "./components/AvatarChat";
 import "./App.css";
 
 const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8000";
@@ -12,6 +13,7 @@ export default function App() {
   const [report, setReport] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [showAvatar, setShowAvatar] = useState(false);
 
   async function runAnalysis() {
     setLoading(true);
@@ -168,6 +170,11 @@ export default function App() {
             />
           </section>
 
+          {/* Floating avatar button */}
+          <button className="avatar-fab" onClick={() => setShowAvatar(true)}>
+            🦠 Talk to your gut guide
+          </button>
+
           {/* Footer */}
           <footer className="report-footer">
             <p>
@@ -180,6 +187,7 @@ export default function App() {
           </footer>
         </main>
       )}
+      {showAvatar && <AvatarChat onClose={() => setShowAvatar(false)} />}
     </div>
   );
 }
