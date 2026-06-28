@@ -161,11 +161,6 @@ export default function AvatarChat({ onClose }) {
   return (
     <div className="avatar-overlay">
       <div className="avatar-panel">
-        {/* Close */}
-        <button className="avatar-close" onClick={onClose} aria-label="Close">
-          ✕
-        </button>
-
         {/* 3D scene */}
         <div className="avatar-scene">
           <Canvas camera={{ position: [0, 0.5, 3], fov: 45 }}>
@@ -184,6 +179,10 @@ export default function AvatarChat({ onClose }) {
 
         {/* Chat panel */}
         <div className="avatar-chat-panel">
+          <div className="avatar-chat-header">
+            <span className="avatar-chat-title">Gut Guide</span>
+            <button className="avatar-close" onClick={onClose} aria-label="Close">✕</button>
+          </div>
           <div className="avatar-messages">
             {messages.map((msg, i) => (
               <div key={i} className={`avatar-msg avatar-msg-${msg.role}`}>
