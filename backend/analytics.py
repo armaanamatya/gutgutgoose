@@ -227,6 +227,67 @@ def identify_deficits(abundances: dict[str, float]) -> list[dict]:
     return findings
 
 
+# Age-stratified gut microbiome reference medians (HMP + curatedMetagenomicData)
+_GUT_AGE_REFS = {
+    "akkermansia": {25: 2.5, 30: 2.1, 35: 1.7, 40: 1.2, 45: 0.9, 50: 0.7, 55: 0.5, 60: 0.35, 65: 0.2},
+    "ecoli":       {25: 0.08, 30: 0.15, 35: 0.25, 40: 0.30, 45: 0.50, 50: 0.80, 55: 1.50, 60: 2.50, 65: 4.00},
+    "fp":          {25: 11.0, 30: 9.5, 35: 8.5, 40: 7.9, 45: 7.0, 50: 6.0, 55: 5.0, 60: 4.5, 65: 3.8},
+    "shannon":     {25: 3.1, 30: 3.0, 35: 2.9, 40: 2.7, 45: 2.6, 50: 2.5, 55: 2.4, 60: 2.3, 65: 2.2},
+}
+
+
+def _age_equivalent(value: float, ref: dict, higher_is_better: bool) -> int:
+    """Interpolate the 'age' whose reference median matches value."""
+    ages = sorted(ref.keys())
+    if higher_is_better:
+        if value >= ref[ages[0]]:
+            return ages[0]
+        if value <= ref[ages[-1]]:
+            return ages[-1]
+        for i in range(len(ages) - 1):
+            a1, a2 = ages[i], ages[i + 1]
+            v1, v2 = ref[a1], ref[a2]
+            if v2 <= value <= v1:
+                t = (v1 - value) / (v1 - v2)
+                return round(a1 + t * (a2 - a1))
+    else:
+        if value <= ref[ages[0]]:
+            return ages[0]
+        if value >= ref[ages[-1]]:
+            return ages[-1]
+        for i in range(len(ages) - 1):
+            a1, a2 = ages[i], ages[i + 1]
+            v1, v2 = ref[a1], ref[a2]
+            if v1 <= value <= v2:
+                t = (value - v1) / (v2 - v1)
+                return round(a1 + t * (a2 - a1))
+    return ages[-1]
+
+
+def compute_gut_age(abundances: dict, shannon_h: float, actual_age: int = 42) -> dict:
+    """
+    Estimate biological gut age by mapping each species value to the age bracket
+    whose reference median it matches. Weighted average across four signals.
+    """
+    akk_age     = _age_equivalent(abundances.get("s__Akkermansia_muciniphila", 0),    _GUT_AGE_REFS["akkermansia"], True)
+    ecoli_age   = _age_equivalent(abundances.get("s__Escherichia_coli", 0),           _GUT_AGE_REFS["ecoli"],       False)
+    fp_age      = _age_equivalent(abundances.get("s__Faecalibacterium_prausnitzii", 0), _GUT_AGE_REFS["fp"],        True)
+    shannon_age = _age_equivalent(shannon_h,                                          _GUT_AGE_REFS["shannon"],     True)
+
+    gut_age = round(akk_age * 0.35 + ecoli_age * 0.30 + fp_age * 0.20 + shannon_age * 0.15)
+    return {
+        "gut_age": gut_age,
+        "calendar_age": actual_age,
+        "age_gap": gut_age - actual_age,
+        "components": {
+            "akkermansia_equivalent_age": akk_age,
+            "ecoli_equivalent_age": ecoli_age,
+            "faecalibacterium_equivalent_age": fp_age,
+            "diversity_equivalent_age": shannon_age,
+        },
+    }
+
+
 def run_full_analytics(profile: dict) -> dict:
     """Entry point: takes a loaded susan_profile.json dict, returns full analytics."""
     abundances = profile["relative_abundance"]
@@ -236,6 +297,7 @@ def run_full_analytics(profile: dict) -> dict:
     clr = clr_transform(abundances)
     enterotype = assign_enterotype(abundances)
     gut_score = compute_gut_score(abundances, shannon_h)
+    gut_age = compute_gut_age(abundances, shannon_h, actual_age=user.get("age", 42))
     deficits = identify_deficits(abundances)
 
     species_detail = {}
@@ -258,6 +320,7 @@ def run_full_analytics(profile: dict) -> dict:
                 "Low diversity"
             ),
         },
+        "gut_age": gut_age,
         "enterotype": enterotype,
         "species_detail": species_detail,
         "deficits": deficits,

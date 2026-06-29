@@ -82,6 +82,7 @@ def generate_report(profile_path: str | None = None) -> dict:
         "top_deficits": top_deficits,
         "recommendations_narrative": narrative["recommendations_narrative"],
         "estrobolome_narrative": narrative["estrobolome_narrative"],
+        "gut_age": analytics["gut_age"],
         "top_abundances": analytics["top_abundances"],
         "species_detail": analytics["species_detail"],
         "papers": papers,
