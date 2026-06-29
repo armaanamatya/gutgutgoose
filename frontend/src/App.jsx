@@ -4,6 +4,10 @@ import AbundanceChart from "./components/AbundanceChart";
 import MicrobiomeRadar from "./components/MicrobiomeRadar";
 import FindingCard from "./components/FindingCard";
 import RecommendationList from "./components/RecommendationList";
+import CascadeDiagram from "./components/CascadeDiagram";
+import FoodTrafficLight from "./components/FoodTrafficLight";
+import WeeklyProjection from "./components/WeeklyProjection";
+import DailyCheckIn from "./components/DailyCheckIn";
 import "./App.css";
 
 const AvatarChat = lazy(() => import("./components/AvatarChat"));
@@ -118,6 +122,39 @@ export default function App() {
             </div>
           </section>
 
+          {/* Gut Age Banner */}
+          {report.gut_age && (
+            <div className="gut-age-banner">
+              <div className="gut-age-left">
+                <div className="gut-age-number">{report.gut_age.gut_age}</div>
+                <div className="gut-age-label">Biological gut age</div>
+              </div>
+              <div className="gut-age-divider" />
+              <div className="gut-age-right">
+                <p>
+                  Your calendar age is <strong>{report.gut_age.calendar_age}</strong>.
+                  {" "}Your gut is behaving like a <strong>{report.gut_age.gut_age}-year-old's</strong> — a gap of{" "}
+                  <strong className="gut-age-gap">+{report.gut_age.age_gap} years</strong>.
+                </p>
+                <p className="gut-age-sub">
+                  This gap is driven by your Akkermansia level (equivalent to a {report.gut_age.components.akkermansia_equivalent_age}-year-old)
+                  and E. coli burden (equivalent to a {report.gut_age.components.ecoli_equivalent_age}-year-old).
+                  Both are reversible with your 8-week protocol.
+                </p>
+              </div>
+            </div>
+          )}
+
+          {/* Cascade Diagram */}
+          <section className="report-section cascade-section">
+            <h2 className="section-title">How your deficits connect</h2>
+            <p className="section-subtitle">
+              These aren't three separate problems — they're one cascade. Akkermansia is the
+              root node. Restore it first and the rest starts to resolve.
+            </p>
+            <CascadeDiagram report={report} />
+          </section>
+
           {/* Section 2: Radar — you vs healthy reference */}
           <section className="report-section chart-section">
             <h2 className="section-title">Your microbiome vs healthy reference</h2>
@@ -153,6 +190,16 @@ export default function App() {
             ))}
           </section>
 
+          {/* Food Traffic Light */}
+          <section className="report-section ftl-section">
+            <h2 className="section-title">Your personalised food guide</h2>
+            <p className="section-subtitle">
+              Not generic "eat healthy" advice — each rating is computed from YOUR species profile.
+              The same food can be green for one person and red for another.
+            </p>
+            <FoodTrafficLight />
+          </section>
+
           {/* Section 4: Estrobolome (female-specific) */}
           {report.estrobolome_narrative && (
             <section className="report-section estrobolome-section">
@@ -163,12 +210,32 @@ export default function App() {
             </section>
           )}
 
+          {/* 8-Week Projection */}
+          <section className="report-section proj-section">
+            <h2 className="section-title">Your 8-week recovery timeline</h2>
+            <p className="section-subtitle">
+              Based on clinical trial timelines for your specific species deficits. What changes
+              when — and what to retest at week 8.
+            </p>
+            <WeeklyProjection report={report} />
+          </section>
+
           {/* Section 5: Recommendations */}
           <section className="report-section recs-section">
             <RecommendationList
               deficits={report.top_deficits}
               recommendationsNarrative={report.recommendations_narrative}
             />
+          </section>
+
+          {/* Daily Check-In */}
+          <section className="report-section checkin-section">
+            <h2 className="section-title">Track your progress daily</h2>
+            <p className="section-subtitle">
+              3 taps per day. After a week we can tell you which days correlate with feeling best
+              — and what you probably ate or did differently.
+            </p>
+            <DailyCheckIn />
           </section>
 
           {/* Floating avatar button */}
